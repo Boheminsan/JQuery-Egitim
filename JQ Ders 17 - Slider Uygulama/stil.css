@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+#slider{
+    margin: 20px;
+    width:830px;
+    height: 360px;
+}
+
+.slider{
+    width:830px;
+    height: 360px;
+    overflow: hidden;
+}
+
+.slider ul li{
+    width:830px;
+    height: 360px;
+    float: left;
+}
+
+.sliderButton a{
+    background-color: #333333;
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.sliderButton{
+    text-align: right;
+    padding-top: 10px;
+}
+
+#slider2{
+    margin: 20px;
+    width:830px;
+    height: 360px;
+    margin-top: 50px;
+}
+
+.sliderDikey{
+    width:830px;
+    height: 360px;
+    overflow: hidden;
+}
+
+.sliderDikey ul li{
+    width:830px;
+    height: 360px;
+    float: none;
+}
+
+.sliderButtonDikey a{
+    background-color: #333333;
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.sliderButtonDikey{
+    text-align: right;
+    padding-top: 10px;
+}

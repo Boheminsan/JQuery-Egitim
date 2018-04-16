@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Sayfalama Uygulaması</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var toplam = $("ul#liste li").length;
+        var veri = 2
+        var sayfasayisi = Math.ceil(toplam / veri);
+        // alert(sayfasayisi);
+
+        $("ul#liste li:gt("+(veri-1)+")").hide();
+
+        for (var i = 1; i <= sayfasayisi; i++) {
+            $("#sayfalama").append('<a href="#">' + i + '</a>');
+        }
+
+        $("div#sayfalama a:first ").addClass("aktif");
+
+        $("div#sayfalama a").on("click", function () {
+            var indis = $(this).index()+1;
+            $("div#sayfalama a").not(':eq(' + (indis-1) + ')').removeClass("aktif");
+            $("div#sayfalama a").eq(indis-1).addClass("aktif");
+            var gt=veri*indis;
+            $("ul#liste li").hide();
+            for(var i =gt-veri;i<gt;i++)
+            $("ul#liste li").eq(i).show();
+        });
+
+    });
+</script>
+<style>
+    #sayfalama {
+        padding: 0px 20px 20px 20px;
+    }
+
+    #sayfalama a {
+        color: white;
+        background-color: #333333;
+        padding: 3px 7px;
+        margin-right: 6px;
+        text-decoration: none;
+    }
+
+    #sayfalama a.aktif {
+        background-color: white;
+        color: #333333;
+        padding: 3px 7px;
+        margin-right: 6px;
+        text-decoration: none;
+        border: 2px solid #dddddd;
+    }
+
+    ul#liste {
+        padding: 20px;
+        list-style-type: none;
+    }
+
+    ul#liste li {
+        background-color: #eeeeee;
+        padding: 5px;
+        border: 1px solid #dddddd;
+    }
+
+    p.deneme {
+        background-color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <ul id="liste">
+        <li>1. Sekme</li>
+        <li>2. Sekme</li>
+        <li>3. Sekme</li>
+        <li>4. Sekme</li>
+        <li>5. Sekme</li>
+        <li>6. Sekme</li>
+        <li>7. Sekme</li>
+        <li>8. Sekme</li>
+        <li>9. Sekme</li>
+        <li>10. Sekme</li>
+        <li>11. Sekme</li>
+        <li>12. Sekme</li>
+        <li>13. Sekme</li>
+    </ul>
+    <div id="sayfalama">
+    </div>
+
+</body>
+
+</html>

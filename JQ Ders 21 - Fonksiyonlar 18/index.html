@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Contains ve Resize</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //contains: nesne varsa true
+        var sonuc = $.contains($("div#samsung")[0], $("strong")[0]);
+        if (sonuc) {
+            alert("Nesne bulunuyor.");
+        }
+        else {
+            alert("nesne yokk");
+        }
+
+        //resize: bir yapıyı yeniden boyutlandırmada bu değişikliği yakalamamızı sağlar.
+        $(window).resize(function () {
+            var width = $(this).width();
+            var height = $(this).height();
+            $("#sonuc").html("    <strong>Width:</strong>" + width + "<br/>    <strong>Height:</strong>" + height + "<br/>")
+            //alert(width);
+            //alert(height);
+        });
+
+    });
+</script>
+<style>
+</style>
+</head>
+
+<body>
+    <div id="samsung">
+        Bu tarayıcı
+        <strong> versiyonu </strong>
+    </div>
+    <div id="sonuc"></div>
+</body>
+
+</html>

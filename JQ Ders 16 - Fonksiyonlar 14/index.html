@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>One ve Submit</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("button").one("click",function(){
+            $("span").toggle();//bir defa çalışacak
+        });
+        $(".deneme").click(function(){
+            $("form").submit(function(){
+                var deger=$("input").val();
+                if(deger=="")
+                {
+                    alert("Değer boş!")
+                    return false;
+                }
+                return true;
+            }).submit();
+        })
+    });
+</script>
+<style>
+ 
+</style>
+</head>
+
+<body>
+    <div class="deneme">Formu Post Et</div>
+    <form method="post">
+        <input type="text" name="deneme" id="">
+    </form>
+    <button>Göster/Gizle</button>
+    <span>deneme</span>
+    
+
+</body>
+
+</html>

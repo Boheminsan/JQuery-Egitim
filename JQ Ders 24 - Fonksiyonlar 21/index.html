@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Is, ReplaceWith ve Blur</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var sonuc = $("*").is("img");
+        //    if (sonuc) {
+        //        $("body").html("resim var");
+        //    }
+        $("div").click(function () {
+            if ($(this).is(".diger")) {
+                $(this).html("doğru dive tıkladın");
+            }
+        })
+        //    $("a").replaceWith("<em>Bu bir eğik yazıdır.</em>");
+        $("a").each(function () {
+            var text = $(this).text();
+            $(this).replaceWith("<em>" + text + "</em>");
+        });
+        $("input").focus(function () {
+            $(this).css("border-color", "green");
+        }).blur(function () {
+            $(this).css("border-color", "blue");
+        });
+        var run = true;
+        var deger = 0;
+        $(window).focus(function () {
+            run = true;
+        }).blur(function () {
+            run = false;
+        });
+        setInterval(function () {
+            if (run) {
+                deger++;
+                $("body").html(deger);
+            }
+        }, 1000)
+
+    });
+</script>
+<style>
+</style>
+</head>
+
+<body>
+
+    <div class="tab">1.div</div>
+    <div class="tab">2.div</div>
+    <div class="diger">3.div</div>
+    <div class="tab">4.div</div>
+    <div class="tab">5.div</div>
+    <a href="">Cıvızzıpp!!!</a>
+    <a href="">Cıvız!!!</a>
+    <a href="">Cıvıp!!!</a>
+    <a href="">Cıpp!!!</a>
+    <a href="">Vızzıpp!!!</a>
+
+    <input type="text">
+</body>
+
+</html>

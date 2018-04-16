@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Last, GetJSON ve Each Döngüsü</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("ul#Batuhan li:last a").css("color", "red");
+        $.getJSON("http://headers.jsontest.com/", function (veri) {
+            // alert(veri.Host);
+            //getJSON()
+            var a = "X-Cloud-Trace-Context";
+            var b = "Upgrade-Insecure-Requests";
+            var c = "Accept-Language";
+            var d = "Host";
+            var e = "Referer";
+            var f = "DNT";
+            var g = "User-Agent";
+            var h = "Accept";
+            var i = "Cache-Control";
+            $("div#sonuc").append('<strong>' + a + ':</strong>' + veri[a] + '</br>');
+            $("div#sonuc").append('<strong>' + b + ':</strong>' + veri[b] + '</br>');
+            $("div#sonuc").append('<strong>' + c + ':</strong>' + veri[c] + '</br>');
+            $("div#sonuc").append('<strong>' + d + ':</strong>' + veri[d] + '</br>');
+            $("div#sonuc").append('<strong>' + e + ':</strong>' + veri[e] + '</br>');
+            $("div#sonuc").append('<strong>' + f + ':</strong>' + veri[f] + '</br>');
+            $("div#sonuc").append('<strong>' + g + ':</strong>' + veri[g] + '</br>');
+            $("div#sonuc").append('<strong>' + h + ':</strong>' + veri[h] + '</br>');
+            $("div#sonuc").append('<strong>' + i + ':</strong>' + veri[i]);
+            //each
+            // $("ul#Batuhan li").each(function (index, element) {
+            //     $(this).text("LivaneLi - " + (index + 1));
+            // });
+            $("ul").each(function () {
+                $("li:last a", this).css("color", "green");
+            });
+        });
+    });
+</script>
+<style>
+</style>
+</head>
+
+<body>
+    <div id="sonuc">
+
+    </div>
+    <ul id="Batuhan">
+        <li>
+            <a href="#">1.Sekme</a>
+        </li>
+        <li>
+            <a href="#">2.Sekme</a>
+        </li>
+        <li>
+            <a href="#">3.Sekme</a>
+        </li>
+        <li>
+            <a href="#">4.Sekme</a>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="#">1.Sekme</a>
+        </li>
+        <li>
+            <a href="#">2.Sekme</a>
+        </li>
+        <li>
+            <a href="#">3.Sekme</a>
+        </li>
+    </ul>
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Hover, Size ve Fade</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("div.Batuhan").hover(function () {
+            $("div.Batuhan2").hide(1500);
+        }, function () {
+            $("div.Batuhan2").show(500);
+        });
+        var toplam = $("ul li").length;
+        alert(toplam);
+
+        $("button#bir").click(function(e){
+            $("div.Batuhan").fadeIn();            
+        })
+        $("button#iki").click(function(e){
+            $("div.Batuhan").fadeOut();            
+        })
+        $("button#uc").click(function(e){
+            $("div.Batuhan").fadeTo("fast", 0.2);            
+        })
+        $("button#dort").click(function(e){
+            $("div.Batuhan").fadeToggle();            
+        })
+    });
+</script>
+<style>
+    div {
+        padding: 20px;
+        border: 5px solid #aaaaaa;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="Batuhan"> Bu divin üstüne gelince,</div>
+    <div class="Batuhan2"> Bu div gizlenecek.</div>
+    <ul>
+        <li>lilililili</li>
+        <li>lilililili</li>
+        <li>lilililili</li>
+        <li>lilililili</li>
+        <li>lilililili</li>
+        <li>lilililili</li>
+        <li>lilililili</li>
+        <li>lilililili</li>
+    </ul>
+    <button id="bir"> Fade In </button>
+    <button id="iki"> Fade Out </button>
+    <button id="uc"> Fade To </button>
+    <button id="dort"> Fade Toggle </button>
+</body>
+
+</html>

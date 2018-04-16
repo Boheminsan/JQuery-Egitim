@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Stop, Contains ve IsNumeric</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("div.ac").click(function () {
+            $("div.kutu").stop().slideToggle();
+        });
+
+        $.expr[':'].icontains = $.expr.createPseudo(function (text) {
+            return function (e) {
+                return $(e).text().toUpperCase().indexOf(text.toUpperCase()) >= 0;
+            };
+        });
+        $("ul.filtre li:icontains('batuhan')").css("color", "darkgreen").css("background-color", "silver");
+
+        $("button#button").click(function () {
+            var $sayi = $("input[name=sayi]").val();
+            if ($.isNumeric($sayi)) {
+                alert("Girdiğiniz sayi:" + $sayi);
+            }
+            else {
+                alert("Bir sayı girmediniz.");
+            }
+        });
+    });
+</script>
+<style>
+    .ac {
+        border: 1px solid #dddddd;
+        padding: 5px;
+    }
+
+    .kutu {
+        background-color: #dddddd;
+        margin-top: 10px;
+        padding: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="ac">Kutuyu Aç</div>
+    <div class="kutu">Bu kutu açılacak...</div>
+    <ul class="filtre">
+        <li>benim adım Batuhan</li>
+        <li>benim adım batuhan</li>
+        <li>benim adım bohemian</li>
+        <li>ben bohemian</li>
+        <li>ben batuhan</li>
+    </ul>
+
+
+    <form action="" method="POST">
+        Lütfen bir sayı girin:
+        <input type="text" name="sayi">
+        <button id="button">Göster</button>
+    </form>
+</body>
+
+</html>

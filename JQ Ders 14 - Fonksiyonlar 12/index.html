@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Next, Focusout ve Dblclick</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("input#input").next().hide();
+        $("input#input").focus(function () {
+            if ($(this).val() == 'Sitede Ara...') {
+                $(this).val('');
+            }
+        }).focusout(function () {
+            if ($(this).val() == '') {
+                $(this).val('Sitede Ara...');
+            };
+        });
+
+        $("div.deneme").dblclick(function(){
+            $(this).css("background-color","lime");
+        });
+    })
+</script>
+<style>
+</style>
+</head>
+
+<body>
+    <input type="search" name="" id="input" value="Sitede Ara...">
+    <button>Ara</button>
+    <p>Bu bir paragraftır.</p>
+    <div class="deneme">divicero</div>
+</body>
+
+</html>

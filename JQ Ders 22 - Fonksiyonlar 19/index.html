@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Scroll</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(window).scroll(function () {
+            var height = $(this).scrollTop();
+            //alert(height);
+            // if (height>55) {
+            //     $(".menu").css("margin-top",    (height-55) + "px");
+            // }
+            // else
+            // {
+            //     $(".menu").css("margin-top",    "5px");
+            // }
+
+            if (height > 100) {
+                $(".anamenu").css(
+                    {
+                        "position": "fixed",
+                        "width": "100%",
+                        "top": "0",
+                        "left": "0",
+                        "box-sizing": "border-box"
+                    }
+                );
+            }
+            else {
+                $(".anamenu").css(
+                    {
+                        "position": "inherit"
+                    }
+                );
+            }
+        });
+        height = 0;
+        $("button#asagi").click(function () {
+            height=height+101;
+            $(window).scrollTop(height);
+        });
+        $("button#yukari").click(function () {
+            height=height-101;
+            $(window).scrollTop(height);
+        });
+    });
+</script>
+<style>
+    body {
+        background-color: #333333;
+        height: 1500px;
+    }
+
+    .anamenu {
+        background-color: #aaaaaa;
+        padding: 15px;
+    }
+
+    .menu {
+        width: 200px;
+        height: 350px;
+        background-color: #aaaaaa;
+        margin-top: 5px;
+    }
+
+    .sag {
+        background-color: #aaaaaa;
+        height: 35px;
+        width: 600px;
+        margin-left: 205px;
+        margin-top: 5px;
+        float: left;
+    }
+
+    .anamenu a {
+        list-style: none;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="anamenu">
+            <div style="float: right;">
+                <button id="asagi">Aşağı</button>
+                <button id="yukari">Yukarı</button>
+            </div>
+            <a href="#">Anasayfa</a>
+            <a href="#">Hakkında</a>
+            <a href="#">iletişim</a>
+        </div>
+    </div>
+    <div class="sag ">İçerik</div>
+    <div class="sol">
+        <div class="menu">Bu bir menüdür.
+        </div>
+    </div>
+
+</body>
+
+</html>

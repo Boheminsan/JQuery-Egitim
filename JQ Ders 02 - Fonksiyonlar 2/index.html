@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/stil.css">
+<title>Css, Attr ve RemoveAttr</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $.Bohem = {
+            gonder: function (url, sitesahibi) {
+                alert(url + " " + sitesahibi);
+            },
+            onayla: function () {
+                alert("Onaylandı.");
+            }
+        }
+        $("ul.batuhan li").click(function () {
+            var val = $(this).text();
+            alert(val);
+            var index = $(this).index();
+            alert(index);
+            $("nav").hide(1000);
+        });
+        $("button").click(function () {
+            var deger = $("input[name=deger]").val();
+            deger=$.trim(deger);
+            if(!deger){
+                alert("Boş bırakmayın.");
+            }
+        });
+    });
+</script>
+<style>
+    li {
+        float: left;
+        margin: 15px;
+        padding: 15px;
+        border: 3px lightcoral solid;
+        background-color: darkgreen;
+        color: orange;
+        list-style: none;
+    }
+
+    nav {
+        width: 700px;
+        height: 100px;
+        background-color: lemonchiffon;
+    }
+
+    nav li a {
+        font-size: 22px;
+        color: lemonchiffon;
+    }
+</style>
+</head>
+
+<body>
+    <nav id="menu">
+        <ul class="batuhan">
+            <li>
+                <a href="#.html">Anasayfa</a>
+            </li>
+            <li>
+                <a href="#.html">Foto Galeri</a>
+            </li>
+            <li>
+                <a href="#.html">Video</a>
+            </li>
+            <li>
+                <a href="#.html">Hakkımda</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="form">
+        <input type="submit" onclick="$.Bohem.gonder('batuhanaktas.blogspot.com','Batuhan Aktaş')" value="Yapıştırr!">
+        <input type="submit" onclick="$.Bohem.onayla()" value="Onayla">
+        <input type="text" name="deger" id="">
+        <button>Sonucu Al</button>
+
+    </div>
+    <div class="batuhan">
+        Bana Tıkla
+    </div>
+    <section id="orta">
+        <p class="renkli">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas eget diam at scelerisque. Nullam aliquet varius nunc
+            id sagittis. Curabitur pretium massa ac turpis tempor viverra. Donec aliquet quam eget augue suscipit, et placerat
+            libero fermentum. Sed et diam vitae sem dictum ullamcorper in eget erat. Cras auctor sagittis ante, at volutpat
+            augue tincidunt et. Mauris ultrices massa non pharetra vehicula. Integer viverra, orci vel dapibus dictum, est
+            elit faucibus tortor, vitae porta ligula leo in justo. Fusce dapibus tincidunt mauris tincidunt malesuada.
+        </p>
+        <p class="renkli2" style="background-color:black;">
+            Cras ipsum quam, venenatis eget erat ac, bibendum viverra ante. Vestibulum non neque et lacus iaculis mollis sed eget neque.
+            Integer et dapibus felis, sit amet ultricies nibh. Fusce sollicitudin vitae sem pulvinar finibus. Curabitur odio
+            ipsum, mollis vel risus ac, fermentum mattis nunc. Nullam et rhoncus massa. Fusce nec massa nibh. Curabitur vel
+            urna nunc.
+        </p>
+    </section>
+
+
+
+</body>
+
+</html>

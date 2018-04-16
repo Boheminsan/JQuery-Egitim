@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Remove Toggle ve Slide</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("button#gizle").click(function(){
+            $("div.Batuhan").hide();            
+        })
+        $("button#yoket").click(function(){
+            $("div.Batuhan2").remove();            
+        })
+        $("button#gosgiz").click(function(){
+            $("div.Batuhan3").toggle();            
+        })
+        $("button#slideUp").click(function(){
+            $("div.Batuhan3").slideUp();            
+        })
+        $("button#slideDown").click(function(){
+            $("div.Batuhan3").slideDown();            
+        })
+        $("button#slideToggle").click(function(){
+            $("div.Batuhan3").slideToggle();            
+        })
+
+    });
+</script>
+<style type="text/css">
+    div {
+        padding: 20px;
+        border: 5px solid #aaaaaa; margin-bottom: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="Batuhan"> Bu div gizlenecek </div>
+    <div class="Batuhan2"> Bu div yok olacak </div>
+    <div class="Batuhan3"> Bu div git gel yapıyor. </div>
+    <button id="gizle"> Tıkla Gizle </button>
+    <button id="yoket"> Tıkla Yok Et </button>
+    <button id="gosgiz"> Gizle Göster </button>
+    <button id="slideUp"> Slide Up </button>
+    <button id="slideDown"> Slide Down </button>
+    <button id="slideToggle"> Slide Slide </button>
+</body>
+
+</html>

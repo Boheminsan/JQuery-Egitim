@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Checked, Width ve Load</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("button").click(function () {
+            var val = $("input[type=checkbox]:checked").val();
+            if (val) {
+                alert("işleme devam edebilisiniz");
+            }
+            else {
+                alert("kuralları kabul etmeniz gerek");
+            }
+        });
+        $("div.batuhan").width(500);
+        var gen = $("div.batuhan").width();
+        $("div.batuhan").height(500);
+        var yuk = $("div.batuhan").width();
+        // alert(gen);
+        // alert(yuk);
+        $("div img#resim").load(function () {
+            $(".bilgi").hide();
+        });
+    });
+</script>
+<style>
+    div.batuhan {
+
+        background-color: #cccccc;
+    }
+</style>
+</head>
+
+<body>
+    <div id="kurallar"> Burada kurallar yer alacak.</div>
+    <input type="checkbox" name="kabul" id="kabul">
+    <label for="kabul">Kuralları okumadım ama kabul ediyorum.</label>
+    <button>İşleme devam et</button>
+    <div class="batuhan"></div>
+    
+    <div class="bilgi">Yükleniyor...</div>
+    <div class="resim">
+        <img src="loadimg.jpg" alt="yükleniyor..." id="resim" title="Haydee">
+    </div>
+
+    <!-- <p>Buraya Tıkla</p>
+    <a href="#">Buraya Tıkla</a>
+    
+    <ul>
+        <li>1. Sekme</li>
+        <li>2. Sekme</li>
+        <li>3. Sekme</li>
+    </ul>
+    <div class="tab">1.div</div>
+    <div class="tab">2.div</div>
+    <div class="tab">3.div</div> -->
+
+</body>
+
+</html>

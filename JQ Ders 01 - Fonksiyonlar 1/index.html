@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/stil.css">
+<title>Nesneler, Metotlar ve  Hide</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("p.paragraf").hide(2000);
+        $("p.renkli").css("color","red");
+        $("p.renkli2").css({
+            "color":"cyan",
+            "text-decoration":"underline"
+        });
+        //        alert($("p").css("background-color"));
+        
+    });
+</script>
+</head>
+
+<body>
+    <nav id="menu">
+        <a href="index.html">Anasayfa</a> |
+        <a href="foto.html">Foto Galeri</a> |
+        <a href="video.html">Video</a> |
+        <a href="hakkimda.html">Hakkımda</a>
+    </nav>
+    <section id="orta">
+        <p class="renkli">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas eget diam at scelerisque. Nullam aliquet varius nunc
+            id sagittis. Curabitur pretium massa ac turpis tempor viverra. Donec aliquet quam eget augue suscipit, et placerat
+            libero fermentum. Sed et diam vitae sem dictum ullamcorper in eget erat. Cras auctor sagittis ante, at volutpat
+            augue tincidunt et. Mauris ultrices massa non pharetra vehicula. Integer viverra, orci vel dapibus dictum, est
+            elit faucibus tortor, vitae porta ligula leo in justo. Fusce dapibus tincidunt mauris tincidunt malesuada.
+        </p>
+        <p class="renkli2" style="background-color:black;">
+            Cras ipsum quam, venenatis eget erat ac, bibendum viverra ante. Vestibulum non neque et lacus iaculis mollis sed eget neque.
+            Integer et dapibus felis, sit amet ultricies nibh. Fusce sollicitudin vitae sem pulvinar finibus. Curabitur odio
+            ipsum, mollis vel risus ac, fermentum mattis nunc. Nullam et rhoncus massa. Fusce nec massa nibh. Curabitur vel
+            urna nunc.
+        </p>
+        <p class="paragraf">
+            Ut pretium porta iaculis. Mauris eros ex, vestibulum sed elit nec, ullamcorper viverra velit. Maecenas mattis tempus justo
+            vel gravida. Duis vestibulum tortor et odio lobortis, at viverra sapien sagittis. Nunc non libero finibus, egestas
+            lacus quis, posuere lectus. Ut non nisi eget eros commodo commodo. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Duis non euismod erat. Mauris laoreet sollicitudin dui eu facilisis. Donec in pretium nisl. Suspendisse
+            urna dolor, gravida id elit sit amet, rhoncus mattis ex. Pellentesque id venenatis tellus, nec elementum quam.
+            Pellentesque congue vulputate fringilla.
+        </p>
+    </section>
+    <div id="icerik">
+        <h4>İçerik</h4>
+        <ol>
+            <li>Yeryüzü</li>
+            <li>Atmosfer, iklim ve mevsimler</li>
+            <li>Dünyadaki su</li>
+            <li>Ekosistem</li>
+        </ol>
+    </div>
+    <h3 style="border-bottom:1px solid black;">Dünya</h3>
+    <p style="font-style:italic; padding-left:20px; font-size:14px;">Ana makaleler: Dünya ve Dünya bilimi</p>
+    <p> 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ligula est, id bibendum ex convallis non. Pellentesque
+        interdum molestie tortor in malesuada. Ut hendrerit orci at neque pellentesque, non pharetra nulla scelerisque. Donec
+        sit amet mi orci. Nulla in dolor sollicitudin, consectetur nibh sit amet, efficitur enim. Donec sed ante ut nunc
+        viverra venenatis. Morbi dolor dui, tempor lacinia massa eget, luctus convallis nisi. Nam laoreet urna ut elit commodo
+        viverra. Pellentesque pellentesque tempor ex ut ullamcorper. Nunc ut accumsan dolor, eu pulvinar justo. Maecenas
+        euismod laoreet tortor et dignissim. Integer auctor, ante eleifend placerat dictum, nibh sapien tristique arcu, gravida
+        imperdiet mi dui eu lacus. Fusce quis lobortis risus, nec bibendum metus. Sed vitae vulputate nunc.
+    </p>
+    <p>
+        Proin sit amet hendrerit felis, non dictum sapien. Fusce aliquet efficitur elit, ut condimentum mauris porttitor sit amet.
+        Phasellus a leo consectetur, imperdiet ante ut, elementum nibh. Nulla hendrerit enim eget orci tempor feugiat. Nunc
+        ante lorem, ultrices non lobortis in, dapibus sed augue. In eget ultricies velit. Ut sit amet luctus nisl.
+    </p>
+    <p>
+        Quisque in ullamcorper turpis. In sagittis odio sapien, quis malesuada sem laoreet sit amet. Maecenas mi libero, pretium
+        in elit sit amet, malesuada condimentum ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
+        laoreet nisl. Nunc finibus eros sed tortor placerat, ut blandit nisl fermentum. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis egestas. Sed ut blandit risus. Nulla pharetra ligula sit amet ornare
+        tristique. Etiam fringilla enim at dolor rutrum, viverra interdum ipsum molestie. Donec pharetra bibendum sapien,
+        non ornare lorem convallis fermentum. Aliquam ullamcorper lorem nisl, et efficitur nunc finibus sodales. Suspendisse
+        sed nisl fermentum, porta lorem at, interdum purus. Proin quis luctus mi, ut elementum quam.
+    </p>
+    <h3 style="border-bottom:1px solid black;">Atmosfer, İklim ve Mevsimler</h3>
+    <p style="font-style:italic; padding-left:20px; font-size:14px;">Ana makaleler: Atmosfer, İklim ve Mevsimler</p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ligula est, id bibendum ex convallis non. Pellentesque
+        interdum molestie tortor in malesuada. Ut hendrerit orci at neque pellentesque, non pharetra nulla scelerisque. Donec
+        sit amet mi orci. Nulla in dolor sollicitudin, consectetur nibh sit amet, efficitur enim. Donec sed ante ut nunc
+        viverra venenatis. Morbi dolor dui, tempor lacinia massa eget, luctus convallis nisi. Nam laoreet urna ut elit commodo
+        viverra. Pellentesque pellentesque tempor ex ut ullamcorper. Nunc ut accumsan dolor, eu pulvinar justo. Maecenas
+        euismod laoreet tortor et dignissim. Integer auctor, ante eleifend placerat dictum, nibh sapien tristique arcu, gravida
+        imperdiet mi dui eu lacus. Fusce quis lobortis risus, nec bibendum metus. Sed vitae vulputate nunc.
+    </p>
+    <p>
+        Proin sit amet hendrerit felis, non dictum sapien. Fusce aliquet efficitur elit, ut condimentum mauris porttitor sit amet.
+        Phasellus a leo consectetur, imperdiet ante ut, elementum nibh. Nulla hendrerit enim eget orci tempor feugiat. Nunc
+        ante lorem, ultrices non lobortis in, dapibus sed augue. In eget ultricies velit. Ut sit amet luctus nisl.
+    </p>
+    <p>
+        Quisque in ullamcorper turpis. In sagittis odio sapien, quis malesuada sem laoreet sit amet. Maecenas mi libero, pretium
+        in elit sit amet, malesuada condimentum ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
+        laoreet nisl. Nunc finibus eros sed tortor placerat, ut blandit nisl fermentum. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis egestas. Sed ut blandit risus. Nulla pharetra ligula sit amet ornare
+        tristique. Etiam fringilla enim at dolor rutrum, viverra interdum ipsum molestie. Donec pharetra bibendum sapien,
+        non ornare lorem convallis fermentum. Aliquam ullamcorper lorem nisl, et efficitur nunc finibus sodales. Suspendisse
+        sed nisl fermentum, porta lorem at, interdum purus. Proin quis luctus mi, ut elementum quam.
+    </p>
+    <img src="" alt="">
+</body>
+
+</html>

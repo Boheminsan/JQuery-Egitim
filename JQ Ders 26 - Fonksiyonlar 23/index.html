@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Finish, FirstOfType, On ve Off</title>
+<link rel="stylesheet" href="stil.css">
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('div').animate({
+            marginLeft: '300px'
+        }, 2500).animate({
+            marginTop: '200px'
+        }, 2500);
+
+        $("#stop").click(function () {
+            $("div").stop();
+        });
+
+        $("#finish").click(function () {
+            $("div").finish();
+        });
+        $('ul li:first-of-type').css("color", "red");
+        $("body").on('click', 'span', function () {
+            $(this).after(" tıkladın");
+        });
+        $('button#off').click(function(){
+            $("body").off('click', 'span');
+        });
+    });
+</script>
+<style>
+</style>
+</head>
+
+<body>
+    <div class="tab">1.div</div>
+    <div class="tab">2.div</div>
+    <button id="stop">Dur</button>
+    <button id="finish">Bitir</button>
+    <button id="off">Off</button>
+    <ul>
+        <li>1 li</li>
+        <li>2 li</li>
+        <li>3 lü</li>
+        <li>4 lü</li>
+        <li>5 li</li>
+    </ul>
+    <ul>
+        <li>11 li</li>
+        <li>22 li</li>
+        <li>33 lü</li>
+        <li>44 lü</li>
+        <li>55 li</li>
+    </ul>
+
+    <span>Burası spandır.</span>
+</body>
+
+</html>

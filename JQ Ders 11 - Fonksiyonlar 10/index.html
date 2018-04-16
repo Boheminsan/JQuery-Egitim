@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Html, Class ve Prepend</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+
+        var deger = $("div.deneme1").html();
+        var deger2 = $("div.deneme1").text();
+        // alert(deger);
+        // alert(deger2);
+        $("button.yardugmeli").click(function () {
+            var deger3 = $("input[name=deger1]").val();
+            alert(deger3);
+        })
+        $("div.deneme1").click(function(){
+            $(this).toggleClass("deneme2");
+        });
+        $("div.deneme3").click(function(){
+            $(this).removeClass("deneme3");
+        });
+        $("div.deneme1").prepend("<button>Tıkla</button>");
+    });
+</script>
+<style>
+    .deneme1 {
+        border: 5px solid #dddddd;
+        background-color: lightgreen;
+        padding: 10px;
+    }
+
+    .deneme2 {
+        border: 5px solid #dddddd;
+        background-color: lightblue;
+        padding: 10px;
+    }
+
+    .deneme3 {
+        border: 5px solid pink;
+        background-color: green;
+        padding: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+    <input type="text" name="deger1" id="yazi">
+    <button class="yardugmeli">İşlem Yap</button>
+    <div id="divv"></div>
+    <div class="deneme1">Bu
+        <strong>garip</strong> bir deneme dividir.</div>
+    <div class="deneme2">Bu
+        <strong>garip</strong> bir deneme dividir.</div>
+    <div class="deneme3">Bu
+        <strong>garip</strong> bir deneme dividir.</div>
+
+</body>
+
+</html>

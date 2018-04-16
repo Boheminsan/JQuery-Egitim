@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Tab Uygulaması</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("div.icerik:not(:first)").hide();
+        $("ul#sekmeler li").click(function () {
+            var index = $(this).index();
+            $("div.icerik").slideUp(300);
+            $("div.icerik:eq(" + index + ")").slideDown(300);
+            $("ul#sekmeler li:eq(" + index + ")").attr("class","aktif");
+            $("ul#sekmeler li:not(:eq(" + index + "))").removeAttr("class","aktif");
+            return false;
+        });
+        
+    });
+</script>
+<style>
+    body {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul#sekmeler {
+        margin-bottom:10px;
+        height: 25px;
+        padding-left: 0px; 
+    }
+
+    ul#sekmeler li {
+        padding: 0px;
+        list-style: none;
+        float: left;
+        margin-right: 5px;
+    }
+
+    ul#sekmeler li a {
+        text-decoration: none;
+        display: block;
+        border: 2px solid #bbbbbb;
+        padding: 4px 7px;
+        color: #333333;
+        background-color: white;
+    }
+
+    ul#sekmeler li.aktif a {
+        background-color: black;
+        color: white;
+        border-color: #333333;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    div.icerik{
+        border: 2px solid #dddddd;
+        padding: 10px;
+        color: #aaaaaa;
+    }
+</style>
+</head>
+
+<body>
+    <!-- <button>Tıkla</button>
+    <p>Buraya Tıkla</p>
+    <a href="#">Buraya Tıkla</a>
+    <div id="Batuhan"></div> -->
+    <ul id="sekmeler">
+        <li>
+            <a href="#">1. Sekme</a>
+        </li>
+        <li>
+            <a href="#">2. Sekme</a>
+        </li>
+        <li>
+            <a href="#">3. Sekme</a>
+        </li>
+    </ul>
+    <div class="clear"></div>
+    <div class="icerik">
+        1.div
+    </div>
+    <div class="icerik">
+        2.div
+    </div>
+    <div class="icerik">
+        3.div
+    </div>
+
+</body>
+
+</html>

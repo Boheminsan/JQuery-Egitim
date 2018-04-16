@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Post, Get ve Success</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        ////post
+        // $("button").click(function () {
+        //     $.post("ajax.php", function (veri) {
+        //         $("#sonuc").html(veri);
+        //     });
+        // });
+        // $("button").click(function () {
+        //     var q = $("input[name=q]").val();
+        //     $.get("ajax.php",{ "q": q}, function (veri) {
+        //         $("#sonuc").html(veri);
+        //     });
+        // });
+
+        // $("button").click(function () {
+        //     var q = $("input[name=q]").val();
+        //     $.post("ajax.php", { "id": ['1','2','3','4'] }, function (veri) {
+        //         $("#sonuc").html(veri);
+        //     });
+        // });
+
+        ////json
+        // $("button").click(function () {
+        //     var q = $("input[name=q]").val();
+        //     $.post("ajax.php", function (veri) {
+        //         $("#sonuc").html(veri.batuhan);
+        //     }, "json").done(function () {
+        //         alert("istek");
+        //     });
+        // });
+
+        ////get
+        $("button").click(function () {
+            var q = $("input[name=q]").val();
+            $.get("ajax.php", { "q": q }, function (veri) {
+                $("#sonuc").html(veri);
+            });
+        });
+    });
+</script>
+<style>
+</style>
+</head>
+
+<body>
+    <form action="" method="POST" onsubmit="return false">
+        <input type="text" name="q">
+    <button>Ajax işlemini başlat</button>
+    </form>
+    
+    <div id="sonuc"></div>
+</body>
+
+</html>

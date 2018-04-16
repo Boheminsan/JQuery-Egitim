@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Eq, Animate ve Parent</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("ul li:eq(2)").css("background-color", "silver");
+        //veya 
+        // $("ul li").eq(2).css("background-color","lightgreen");
+        $("ul li").animate(
+            {
+                "width": "300px",
+            }
+        ).animate(
+            {
+                "height": "40px",
+                "marginLeft":"20px"
+            }, 2000
+        ).animate(
+            {
+                "marginTop":"20px"
+            }, 2000
+        )
+
+        $(".tab").animate(
+            {
+                "width": "300px",
+                "font-size": "72px"
+            }, 3000
+        );
+
+        $("button").click(function()
+            {
+                $(this).parent().remove();
+            });
+    });
+</script>
+<style>
+    p.deneme {
+        background-color: yellow;
+    }
+</style>
+</head>
+
+<body>
+
+
+    <p>Buraya Tıkla</p>
+    <a href="#">Buraya Tıkla</a>
+    <div id="Batuhan"></div>
+    <ul>
+        <li>Bu bir deneme yazısıdır.
+            <button>Tıkla</button>
+        </li>
+        <li>Bu bir deneme yazısıdır.
+            <button>Tıkla</button>
+        </li>
+        <li>Bu bir deneme yazısıdır.
+            <button>Tıkla</button>
+        </li>
+        <li>Bu bir deneme yazısıdır.
+            <button>Tıkla</button>
+        </li>
+        <li>Bu bir deneme yazısıdır.
+            <button>Tıkla</button>
+        </li>
+        <li>Bu bir deneme yazısıdır.
+            <button>Tıkla</button>
+        </li>
+        <li>Bu bir deneme yazısıdır.
+            <button>Tıkla</button>
+        </li>
+
+    </ul>
+    <div class="tab">1.div</div>
+    <div class="tab">2.div</div>
+    <div class="tab">3.div</div>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Serialize, HasClass ve Change</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $("button").click(function () {
+        //     $(this).after('<button>Bana da Tıkla</button>');
+        // }); // Bu metot ile oluşturulan button sonradan eklendiği için click fonskiyonuna sahip değildir.
+
+
+        $("button#kayit").click(function () {
+            var deger = $("form#form1").serialize();
+            alert(deger);
+        });
+        if ($("div").hasClass("batuhan")) {
+
+            alert("aleleyyo");
+        }
+        $("select").change(function () {
+            var deger = $(this).val();
+            alert(deger);
+        })
+    });
+</script>
+<style>
+    p.deneme {
+        background-color: yellow;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="batuhan"></div>
+    <div class="batuhan1"></div>
+    <div class="batuhan2"></div>
+    <form action="" id="form1">
+        <table>
+            <tr>
+                <td>Kullanıcı Adı:</td>
+                <td>
+                    <input type="text" name="kadi" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>E-posta:</td>
+                <td>
+                    <input type="text" name="eposta" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Şifre:</td>
+                <td>
+                    <input type="password" name="sifre" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Şehir:</td>
+                <td>
+                    <select name="sehir" id="">
+                        <option value="ankara">Ankara</option>
+                        <option value="eskişehir">Eskişehir</option>
+                        <option value="izmir">İzmir</option>
+                        <option value="kütahya">Kütahya</option>
+                        <option value="istanbul">İstanbul</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="kayit">Kayıt Ol</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <!-- <button>Tıkla</button>
+    <p>Buraya Tıkla</p>
+    <a href="#">Buraya Tıkla</a>
+    <div id="Batuhan"></div>
+    <ul>
+        <li>1. Sekme</li>
+        <li>2. Sekme</li>
+        <li>3. Sekme</li>
+    </ul>
+    <div class="tab">1.div</div>
+    <div class="tab">2.div</div>
+    <div class="tab">3.div</div> -->
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/stil.css">
+<title>Live, Append ve Index</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $("button").click(function () {
+        //     $(this).after('<button>Bana da Tıkla</button>');
+        // }); // Bu metot ile oluşturulan button sonradan eklendiği için click fonskiyonuna sahip değildir.
+
+        $(document).on('click', 'button', function () {
+            $(this).after('<button>Bana da Tıkla</button>')
+        });
+        $(document).on('click', 'p', function () {
+            $(this).after('<p>Bana da Tıkla</p>');
+        });
+        $(document).on('mouseover', 'p', function () {
+            $(this).addClass('deneme');
+        });
+        $(document).on('mouseout', 'p', function () {
+            $(this).removeClass('deneme');
+        });
+
+        $("a").click(function () {
+            $("div#Batuhan").append("<div >Bu yeni div</div>");//söz konusu divin içine 
+            // $("div#Batuhan").after("<div >Bu yeni div</div>"); // divin dışına
+        });
+        $("div.tab:not(:first)").hide();
+        $("ul li").click(function () {
+
+            var index = $(this).index();
+            $("div.tab").hide();
+            $("div.tab:eq(" + index + ")").show();
+        });
+    });
+</script>
+<style>
+    p.deneme {
+        background-color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <button>Tıkla</button>
+    <p>Buraya Tıkla</p>
+    <a href="#">Buraya Tıkla</a>
+    <div id="Batuhan"></div>
+    <ul>
+        <li>1. Sekme</li>
+        <li>2. Sekme</li>
+        <li>3. Sekme</li>
+    </ul>
+    <div class="tab">1.div</div>
+    <div class="tab">2.div</div>
+    <div class="tab">3.div</div>
+
+</body>
+
+</html>

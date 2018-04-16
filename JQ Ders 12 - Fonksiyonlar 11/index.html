@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Focus, Clone ve Wrap</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+       
+        
+        $("input#yazi").focus();
+        $("button").click(function(){
+           var dolly= $("input#yazi").clone();
+        $("div#divv").html(dolly);
+        });
+        $(".deneme1").wrap('<div id="cikiss"></div>');
+    });
+</script>
+<style>
+    .deneme1 {
+        border: 5px solid #dddddd;
+        background-color: lightgreen;
+        padding: 10px;
+    }
+
+    .deneme2 {
+        border: 5px solid #dddddd;
+        background-color: lightblue;
+        padding: 10px;
+    }
+    .deneme3 {
+        border: 5px solid pink;
+        background-color: green;
+        padding: 10px;
+    }
+</style>
+</head>
+
+<body>
+    
+    <input type="text" name="deger1" id="yazi">
+    <button class="yardugmeli">İşlem Yap</button>
+    <div id="divv"></div>
+    <div class="deneme1">Bu bir deneme dividir.</div>
+
+</body>
+
+</html>

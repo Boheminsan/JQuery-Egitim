@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Ajax Fonksiyonları</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $(document).ajaxStart(function () {
+            $("#loader").fadeIn();
+        }).ajaxComplete(function () {
+            $("#loader").fadeOut();
+        }).ajaxSuccess(function () {
+            $("#sonuc").css("background-color", "lightgreen");
+        });
+
+        $.ajaxSetup({
+            url: "ajax.php",
+            type: "POST",
+            dataType: "json",
+        });
+
+        $.ajax({
+            data: { "kadi": "bohemian", "sifre": "deneme", "tip": "tipi2tip" },
+            success: function (cevap) {
+                if (cevap.hata) {
+                    alert(cevap.hata);
+                }
+                else {
+                    $("div#sonuc").html(cevap.veri);
+                }
+            }
+        });
+
+        $.ajax({
+
+            data: { "kadi": "bohemian", "sifre": "deneme", "tip": "tipitip" },
+            success: function (cevap) {
+                if (cevap.hata) {
+                    alert(cevap.hata);
+                }
+                else {
+                    $("div#sonuc2").html(cevap.veri);
+                }
+            }
+        });
+    });
+</script>
+<style>
+    #loader {
+        background-color: #333333;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+    <!-- <button>Tıkla</button>
+    <p>Buraya Tıkla</p>
+    <a href="#">Buraya Tıkla</a>
+    <div id="Batuhan"></div>
+    <ul>
+        <li>1. Sekme</li>
+        <li>2. Sekme</li>
+        <li>3. Sekme</li>
+    </ul>
+    <div class="sayfa"></div> -->
+    <div id="sonuc"></div>
+    <div id="sonuc2"></div>
+    <div id="loader">Veri yükleniyor...</div>
+
+
+</body>
+
+</html>

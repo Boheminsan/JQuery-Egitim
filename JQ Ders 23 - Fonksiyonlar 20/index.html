@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<title>Has, Children ve Prev</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        /*if($("div#div").has("strong").length)
+        {
+            $("div#div").html("Bu nesnede strong var.")
+        }*/
+        //children çocuk nesneler için
+        // alert($("div#div").children().length);
+        $("div#div").children("strong").css("color", "lime");
+        $("a").prev().css("background", "yellow");
+    });
+</script>
+<style>
+</style>
+</head>
+
+<body>
+
+    <div id="div">
+        Burası bir divdir.
+        <br>
+        <strong>Burası kalındır.</strong>
+        <br>
+        <em>Burası eğiktir.</em>
+        <strong>
+            <em>Burası hem kalındır hem eğiktir.</em>
+        </strong>
+    </div>
+    <p>Paragraf agraf işler kör asaf asap kasap işlerine girme kıçına kaçar masat pusat boksör zehrini kus at fuat dinlemem der kel esat </p>
+    <a href="">Deneme</a>
+</body>
+
+</html>
