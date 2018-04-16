@@ -1,2 +1,2 @@
 # JQuery-Egitim
-Tayfun Erbilen Jquery derslerin içerisinde yazılan kodlar.
+Tayfun Erbilen'in Jquery eğitimi içerisinde yazılan kodlar.
